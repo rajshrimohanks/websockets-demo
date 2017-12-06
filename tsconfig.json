@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "module": "commonjs",
+    "noImplicitAny": false,
+    "noImplicitThis": true,
+    "strictNullChecks": true,
+    "strict": true,
+    "outDir": "./dist/server",
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "removeComments": false,
+    "sourceMap": true,
+    "declaration": true,
+    "listEmittedFiles": true,
+    "typeRoots": [
+      "node_modules/@types"
+    ]
+  },
+  "compileOnSave": false,
+  "include": [
+    "src/**/*.ts"
+  ],
+  "exclude": [
+    "docs",
+    "tests",
+    "node_modules",
+    "dist"
+  ]
+}
