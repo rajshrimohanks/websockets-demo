@@ -14,6 +14,9 @@ const wss = new WebSocket.Server({ server: server });
 
 wss.on('connection', (ws: WebSocket) => {
 
+  // send immediatly a feedback to the incoming connection
+  ws.send('Hi there, I am a WebSocket server. You are client #' + wss.clients.size);
+
   //connection is up, let's add a simple simple event
   ws.on('message', (message: string) => {
 
@@ -36,9 +39,6 @@ wss.on('connection', (ws: WebSocket) => {
       ws.send(`Hello, you sent -> ${message}`);
     }
   });
-
-  // send immediatly a feedback to the incoming connection
-  ws.send('Hi there, I am a WebSocket server');
 });
 
 // start our server
